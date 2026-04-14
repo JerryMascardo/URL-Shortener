@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>URL Shortener</h1>
+    <p class="subtitle">Paste a long URL and get a short link instantly.</p>
+
+    <label for="urlInput" class="label">Long URL</label>
+    <input id="urlInput" type="url" placeholder="https://example.com/very/long/link" />
+
+    <button id="shortenBtn" class="btn">Shorten</button>
+
+    <section id="resultSection" class="result hidden" aria-live="polite">
+      <p><strong>Short URL:</strong> <a id="shortUrlLink" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+      <div class="actions">
+        <button id="copyBtn" class="btn secondary">Copy Link</button>
+        <button id="statsBtn" class="btn secondary">Check Clicks</button>
+      </div>
+      <p id="clickCount" class="clicks"></p>
+    </section>
+
+    <p id="message" class="message"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
